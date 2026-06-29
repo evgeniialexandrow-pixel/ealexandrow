@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопросы и ответы | Евгений Александров</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для FAQ */
+        .faq-container {
+            max-width: 900px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #dee2e6;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .faq-question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: #004080;
+            transition: color 0.3s;
+        }
+        .faq-question:hover {
+            color: #ff6600;
+        }
+        .faq-answer {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+        .faq-answer.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img alt="Логотип [Ваше Имя]" id="019f084c-2149-7f62-aaf8-6eaea0e47658">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="faq.html">Вопросы и ответы</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container faq-container">
+        <h1>Часто задаваемые вопросы</h1>
+        
+        <!-- Вопрос 1 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">С чего начать участие в тендерах, если я никогда этого не делал?</div>
+            <div class="faq-answer">
+                Начать нужно с анализа рынка и получения электронной подписи. Я помогу вам на всех этапах: от регистрации на торговых площадках до подачи первой заявки и заключения контракта.
+            </div>
+        </div>
+
+        <!-- Вопрос 2 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">Сколько стоят ваши услуги? Вы берёте предоплату?</div>
+            <div class="faq-answer">
+                Стоимость зависит от сложности закупки и объёма работ. В большинстве случаев я работаю по модели постоплаты или % от суммы выигранного контракта, что гарантирует вашу финансовую безопасность. Детали мы обсуждаем на бесплатной консультации.
+            </div>
+        </div>
+
+        <!-- Вопрос 3 -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">Гарантируете ли вы победу в тендере?</div>
+            <div class="faq-answer">
+                Я гарантирую высокое качество подготовки заявки, юридическую чистоту и строгое соблюдение регламентов. Победа зависит от многих факторов, включая конкуренцию, но моя задача — сделать вашу заявку максимально сильной и соответствующей всем требованиям.
+            </div>
+        </div>
+
+         <!-- Вопрос 4 -->
+         <div class="faq-item">
+             <div class="faq-question" onclick="toggleAnswer(this)">Как я могу получить деньги на исполнение контракта без залога?</div>
+             <div class="faq-answer">
+                 Для этого существуют финансовые инструменты, такие как факторинг или целевые кредиты под залог будущего платежа по контракту. Я помогу вам подобрать оптимальный вариант и подготовить документы для банка.
+             </div>
+         </div>
+
+         <!-- Вопрос 5 -->
+         <div class="faq-item">
+             <div class="faq-question" onclick="toggleAnswer(this)">Как проверить надёжность поставщика в Китае?</div>
+             <div class="faq-answer">
+             Проверка поставщика — ключевой этап. Он включает в себя верификацию бизнес-лицензии, проверку производственных мощностей, запрос сертификатов качества и, при необходимости, физический выезд на фабрику. Я беру эту работу на себя.
+             </div>
+         </div>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 [Ваше Имя]. Пермь и вся Россия.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleAnswer(questionElement) {
+            const answer = questionElement.nextElementSibling;
+            answer.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
