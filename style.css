@@ -31,16 +31,8 @@ header .logo {
     align-items: center;
 }
 header .logo img {
-    height: 6%; /* Увеличенная высота */
-    margin-right: 20px; /* Небольшой отступ */
-}
-
-@media (max-width: 768px) {
-    header .logo {
-        display: block;
-        margin-bottom: 10px;
-    }
-}
+    height: 50px; /* Оптимальная высота */
+    margin-right: 20px;
 }
 header nav ul {
     list-style: none;
@@ -52,6 +44,21 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
+}
+
+/* Боковая панель (убираем на всех страницах) */
+aside {
+    display: none;
+}
+
+/* Блок соц.сетей */
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Выравниваем вправо */
+}
+.social-icons a {
+    margin-left: 15px;
 }
 
 /* Главный экран */
@@ -127,20 +134,17 @@ header nav ul li a {
     cursor: pointer;
 }
 
-/* Social icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-.social-icons a {
-    margin-right: 15px;
-}
-.social-icons img {
-    height: 25px;
+/* Footer */
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #666;
 }
 
-/* MOBILE */
+/* Mobile */
 @media (max-width: 768px) {
     /* Бургер-меню */
     header nav ul {
