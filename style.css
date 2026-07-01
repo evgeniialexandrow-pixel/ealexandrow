@@ -81,11 +81,6 @@ header .burger-menu {
     opacity: 1;
     visibility: visible;
 }
-.menu-open.active {
-    display: block !important;
-    opacity: 1;
-    visibility: visible;
-}
 .menu-open ul {
     display: flex;
     flex-direction: column;
