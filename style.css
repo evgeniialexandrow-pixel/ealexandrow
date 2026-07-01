@@ -34,9 +34,9 @@ header .logo img {
     height: 50px; /* Оптимальная высота */
     margin-right: 20px;
 }
-header nav ul {
-    list-style: none;
-    display: flex;
+header nav ul li {
+    margin-left: calc(100% / 7); /* Автоматический отступ */
+}
 }
 header nav ul li {
     margin-left: 25px;
@@ -56,9 +56,8 @@ aside {
     display: flex;
     align-items: center;
     margin-left: auto; /* Выравниваем вправо */
+    width: 200px; /* Зафиксируем ширину */
 }
-.social-icons a {
-    margin-left: 15px;
 }
 
 /* Главный экран */
