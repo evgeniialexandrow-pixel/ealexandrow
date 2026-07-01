@@ -34,9 +34,10 @@ header .logo img {
     height: 50px; /* Оптимальная высота */
     margin-right: 20px;
 }
-header nav ul li {
-    margin-left: calc(100% / 7); /* Автоматический отступ */
-}
+header nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%; /* Устраняет разрыв */
 }
 header nav ul li {
     margin-left: 25px;
@@ -46,11 +47,6 @@ header nav ul li a {
     text-decoration: none;
 }
 
-/* Боковая панель (убираем на всех страницах) */
-aside {
-    display: none;
-}
-
 /* Блок соц.сетей */
 .social-icons {
     display: flex;
@@ -58,6 +54,41 @@ aside {
     margin-left: auto; /* Выравниваем вправо */
     width: 200px; /* Зафиксируем ширину */
 }
+.social-icons a {
+    margin-left: 15px;
+}
+
+/* Бургер-меню */
+header .burger-menu {
+    display: none; /* Скрыть на ПК */
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    z-index: 10;
+}
+.menu-open {
+    display: none; /* Скрыть по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+.menu-open.active {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+}
+.menu-open ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+.menu-open li {
+    margin: 20px 0;
 }
 
 /* Главный экран */
@@ -151,29 +182,11 @@ footer {
     }
     header .burger-menu {
         display: block;
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        z-index: 10;
     }
     .menu-open {
         display: block !important;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(5px);
-    }
-    .menu-open ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 100px;
-    }
-    .menu-open li {
-        margin: 20px 0;
+        opacity: 1;
+        visibility: visible;
     }
 
     /* Другие блоки */
