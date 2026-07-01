@@ -5,32 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Евгений Александров</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const burgerMenu = document.querySelector('.burger-menu');
+            const menuOpen = document.querySelector('.menu-open');
+
+            burgerMenu.onclick = function () {
+                menuOpen.classList.toggle('active');
+            };
+        });
+    </script>
 </head>
 <body>
 
     <!-- Шапка сайта -->
     <header>
-    <div class="container">
-        <div class="logo">
-            <img src="images/logo.png" alt="Логотип Евгения Александрова">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="about.html">Обо мне</a></li>
-                <li><a href="services.html">Услуги</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-                <li><a href="faq.html">Вопросы</a></li>
-            </ul>
-            <!-- Отдельный блок для иконок -->
-            <div class="social-icons">
-                <a href="https://t.me/ealexandrow"><img src="images/tg-icon.svg" alt="Telegram"></a>
-                <a href="https://wa.me/+79292341294"><img src="images/wa-icon.svg" alt="WhatsApp"></a>
-                <a href="https://instagram.com/profile"><img src="images/insta-icon.svg" alt="Instagram"></a>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип Евгения Александрова">
             </div>
-        </nav>
-    </div>
-</header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="faq.html">Вопросы</a></li>
+                </ul>
+                <!-- Отдельный блок для иконок -->
+                <div class="social-icons">
+                    <a href="https://t.me/ealexandrow"><img src="images/tg-icon.svg" alt="Telegram"></a>
+                    <a href="https://wa.me/+79292341294"><img src="images/wa-icon.svg" alt="WhatsApp"></a>
+                    <a href="https://instagram.com/profile"><img src="images/insta-icon.svg" alt="Instagram"></a>
+                </div>
+                <!-- Бургер-меню для мобильных -->
+                <div class="burger-menu">☰</div>
+            </nav>
+            <!-- Скрытое меню для мобильных -->
+            <div class="menu-open">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="about.html">Обо мне</a></li>
+                    <li><a href="services.html">Услуги</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="faq.html">Вопросы</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
 
     <!-- Главный экран -->
     <section class="hero">
@@ -66,7 +88,7 @@
     <!-- Блок "Обо мне" -->
     <section class="about-preview">
         <div class="container">
-            <img alt="Фото Евгения Александрова" class="about-photo" id="019f156e-e082-7748-98c3-306dbed0bcc3">
+            <img src="images/me.png" alt="Фото Евгения Александрова" class="about-photo">
             <div class="about-text">
                 <h2>Обо мне</h2>
                 <p>Более [X] лет я помогаю бизнесу побеждать в тендерах. Моя личная история борьбы за будущее дочери научила меня главному: нет ничего невозможного, если действовать системно.</p>
@@ -82,8 +104,9 @@
             <ul class="contact-list">
                 <li><a href="tel:+79292341294">+7 (929) 234-12-94</a></li>
                 <li><a href="mailto:evgenii.alexandrow@gmail.com">evgenii.alexandrow@gmail.com</a></li>
-                <li><a href="https://t.me/ealexandrow" target="_blank">Telegram: @ealexandrow</a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=79292341294" target="_blank">WhatsApp</a></li>
+                <li><a href="https://t.me/ealexandrow">Telegram: @ealexandrow</a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=79292341294">WhatsApp</a></li>
+                <li><span>Пермь и вся Россия</span></li>
             </ul>
             <a href="contacts.html" class="btn">Перейти к контактам</a>
         </div>
