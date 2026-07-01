@@ -67,7 +67,7 @@ header .burger-menu {
     z-index: 10;
 }
 .menu-open {
-    display: none; /* Скрыть по умолчанию */
+    display: none; /* Скрываем по умолчанию */
     position: fixed;
     top: 0;
     left: 0;
@@ -75,6 +75,11 @@ header .burger-menu {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
+}
+.menu-open.active {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
 }
 .menu-open.active {
     display: block !important;
